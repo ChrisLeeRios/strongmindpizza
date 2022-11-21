@@ -9,7 +9,7 @@ export default async function handler(req, res) {
     // adding this for auth
     // const token = cookies.token
 
-    dbConnect();
+    await dbConnect();
 
     if(method === "GET"){
         try{

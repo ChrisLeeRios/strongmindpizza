@@ -13,6 +13,7 @@ import { useEffect } from "react";
 //admin added for auth
 
 export default function Home({pizzaList, admin }) {
+// export default function Home({pizzaList, admin }) {
   // this next line also for cookie auth for amin
   const [close, setClose] = useState(true);
   const [closeTopping, setCloseTopping] = useState(true);
