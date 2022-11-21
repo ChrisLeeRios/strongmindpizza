@@ -56,7 +56,7 @@ const Add = ({ setClose, toppings }) => {
                 img: url,
             };
 
-            await axios.post("https://strongmindpizza-x9qh-j872e9wfp-chrisleerios.vercel.app/api/products", newProduct);
+            await axios.post("https://strongmindpizza-x9qh.vercel.app/api/products", newProduct);
             setClose(true);
         } catch (err) {
             console.log("err is this", err.response.data.error.message);

@@ -20,7 +20,7 @@ const Index = ({ orders, products, toppings }) => {
         console.log(id);
         try {
             const res = await axios.delete(
-                "https://strongmindpizza-x9qh-j872e9wfp-chrisleerios.vercel.app/api/products/" + id
+                "https://strongmindpizza-x9qh.vercel.app/api/products/" + id
             );
             setPizzaList(pizzaList.filter((pizza) => pizza._id !== id));
         } catch (err) {
@@ -32,7 +32,7 @@ const Index = ({ orders, products, toppings }) => {
         console.log(id);
         try {
             const res = await axios.delete(
-                "https://strongmindpizza-x9qh-j872e9wfp-chrisleerios.vercel.app/api/toppings/" + id
+                "https://strongmindpizza-x9qh.vercel.app/api/toppings/" + id
             );
             setToppingList(toppingList.filter((topping) => topping._id !== id));
         } catch (err) {
@@ -59,7 +59,7 @@ const Index = ({ orders, products, toppings }) => {
         const currentStatus = item.status;
 
         try {
-            const res = await axios.put("https://strongmindpizza-x9qh-j872e9wfp-chrisleerios.vercel.app/api/orders/" + id, {
+            const res = await axios.put("https://strongmindpizza-x9qh.vercel.app/api/orders/" + id, {
                 status: currentStatus + 1,
             });
             setOrderList([
@@ -191,9 +191,9 @@ export const getServerSideProps = async (ctx) => {
         };
     }
 
-    const productRes = await axios.get("https://strongmindpizza-x9qh-j872e9wfp-chrisleerios.vercel.app/api/products");
-    const orderRes = await axios.get("https://strongmindpizza-x9qh-j872e9wfp-chrisleerios.vercel.app/api/orders");
-    const toppingRes = await axios.get("https://strongmindpizza-x9qh-j872e9wfp-chrisleerios.vercel.app/api/toppings");
+    const productRes = await axios.get("https://strongmindpizza-x9qh.vercel.app/api/products");
+    const orderRes = await axios.get("https://strongmindpizza-x9qh.vercel.app/api/orders");
+    const toppingRes = await axios.get("https://strongmindpizza-x9qh.vercel.app/api/toppings");
 
     return {
         props: {
@@ -207,8 +207,8 @@ export const getServerSideProps = async (ctx) => {
 // Without cookie authentification
 
 // export const getServerSideProps = async () => {
-//     const productRes = await axios.get("https://strongmindpizza-x9qh-j872e9wfp-chrisleerios.vercel.app/api/products");
-//     const orderRes = await axios.get("https://strongmindpizza-x9qh-j872e9wfp-chrisleerios.vercel.app/api/orders");
+//     const productRes = await axios.get("https://strongmindpizza-x9qh.vercel.app/api/products");
+//     const orderRes = await axios.get("https://strongmindpizza-x9qh.vercel.app/api/orders");
 
 //     return {
 //         props: {

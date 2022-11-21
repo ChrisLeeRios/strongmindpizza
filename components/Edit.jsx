@@ -66,7 +66,7 @@ const Edit = ({ setClose, editId, thePizza, setPizzaList, toppings }) => {
                 img: url,
             };
 
-            const updatedProduct = await axios.put(`https://strongmindpizza-x9qh-j872e9wfp-chrisleerios.vercel.app/api/products/${thePizza[0]._id}`, newProductData);
+            const updatedProduct = await axios.put(`https://strongmindpizza-x9qh.vercel.app/api/products/${thePizza[0]._id}`, newProductData);
             setClose(true);
             setPizzaList((pizzaList) => {
                 return pizzaList.map((pizza) => {

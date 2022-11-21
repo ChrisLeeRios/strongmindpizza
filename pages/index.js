@@ -61,7 +61,7 @@ export const getServerSideProps = async (ctx) => {
     admin = true;
   }
   console.log("**********BEFORE************")
-  const res = await axios.get("https://strongmindpizza-x9qh-j872e9wfp-chrisleerios.vercel.app/api/products");
+  const res = await axios.get("https://strongmindpizza-x9qh.vercel.app/api/products");
   console.log("*******************************",res.data)
   return {
     props: {
