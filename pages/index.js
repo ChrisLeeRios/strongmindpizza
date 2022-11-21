@@ -8,7 +8,7 @@ import Featured from "../components/Featured";
 import PizzaList from "../components/PizzaList";
 import styles from "../styles/Home.module.css";
 import AddTopping from "../components/AddTopping";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
 //admin added for auth
 
@@ -61,7 +61,7 @@ export const getServerSideProps = async (ctx) => {
     admin = true;
   }
   console.log("**********BEFORE************")
-  const res = await axios.get("http://localhost:3000/api/products");
+  const res = await axios.get("https://strongmindpizza-x9qh-j872e9wfp-chrisleerios.vercel.app/api/products");
   console.log("*******************************",res.data)
   return {
     props: {

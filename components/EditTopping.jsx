@@ -20,7 +20,7 @@ const EditTopping = ({ setCloseTopping , editId,theTopping, setToppingList}) => 
                 title
             };
 
-            const updatedProduct =  await axios.put(`http://localhost:3000/api/toppings/${theTopping[0]._id}`, newProductData);
+            const updatedProduct =  await axios.put(`https://strongmindpizza-x9qh-j872e9wfp-chrisleerios.vercel.app/api/toppings/${theTopping[0]._id}`, newProductData);
             setCloseTopping(true);
             setToppingList((toppingList) => {
                 return toppingList.map((topping) => {

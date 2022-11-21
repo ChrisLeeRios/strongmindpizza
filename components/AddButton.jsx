@@ -5,7 +5,7 @@ const AddButton = ({ setClose, setToppings }) => {
 
     const handleClick = () =>{
         setClose(false);
-        axios.get("http://localhost:3000/api/toppings")
+        axios.get("https://strongmindpizza-x9qh-j872e9wfp-chrisleerios.vercel.app/api/toppings")
         .then((res) => {
             setToppings(res.data);
             console.log("this is the Response", res)

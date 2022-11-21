@@ -11,7 +11,7 @@ const AddTopping = ({ setCloseTopping }) => {
                 title
             };
 
-            await axios.post("http://localhost:3000/api/toppings", newTopping);
+            await axios.post("https://strongmindpizza-x9qh-j872e9wfp-chrisleerios.vercel.app/api/toppings", newTopping);
             setCloseTopping(true);
         } catch (err) {
             console.log("err is this", err);
